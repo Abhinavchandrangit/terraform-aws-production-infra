@@ -22,3 +22,13 @@ variable "private_subnet_cidrs" {
   type        = list(string)
   description = "Private subnet CIDRs"
 }
+
+variable "ami_id" {
+  type        = string
+  description = "AMI ID for EC2 instances"
+}
+
+variable "instance_type" {
+  type        = string
+  description = "EC2 instance type"
+}
