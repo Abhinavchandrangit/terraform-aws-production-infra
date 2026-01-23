@@ -1,3 +1,12 @@
-aws s3 mb s3://my-terraform-state-bucket --region ap-south-1
+terraform {
+  backend "s3" {
+    bucket         = "terraform-state-abhinav-prod"
+    key            = "prod/terraform.tfstate"
+    region         = "ap-south-1"
+    dynamodb_table = "terraform-locks"
+    encrypt        = true
+  }
+}
+
 
 
